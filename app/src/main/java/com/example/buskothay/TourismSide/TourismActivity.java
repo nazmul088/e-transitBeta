@@ -131,7 +131,6 @@ public class TourismActivity extends AppCompatActivity {
 
                 if(adapterView.getItemAtPosition(i).toString().equalsIgnoreCase("Sylhet"))
                 {
-                    System.out.println("Dhukse eikhane");
                     //Sylhet selected
                     LinearLayout linearLayout = findViewById(R.id.linear_layout);
                     linearLayout.removeAllViews();

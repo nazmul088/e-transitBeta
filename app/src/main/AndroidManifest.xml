@@ -25,9 +25,9 @@
         <activity
             android:name=".TourismSide.DetailsTourismPlaceActivity"
             android:exported="false" />
-        <activity
+        <!--<activity
             android:name=".TourismSide.TourismActivity"
-            android:exported="false" />
+            android:exported="false" />-->
         <activity
             android:name=".AuthoritySide.ShowDetailInfoAuthorityInViewBus"
             android:exported="false" />
@@ -47,7 +47,8 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />  <activity android:name=".Passenger.PassengerWindow" />
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".Passenger.PassengerWindow" />
         <activity android:name=".Passenger.TripHistoryActivity" />
         <activity android:name=".Passenger.RechargeSuccessful" />
         <activity android:name=".Passenger.ActivityRecharge" />
@@ -78,7 +79,7 @@
         <activity android:name=".Passenger.showNearbyBusDistanceAndTime" />
         <activity android:name=".Passenger.LiveBusLocation" />
         <activity android:name=".Passenger.ScannerView" />
-        <activity android:name=".start_window">
+        <activity android:name=".TourismSide.TourismActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
