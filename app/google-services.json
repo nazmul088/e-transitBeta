@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "810819483326",
+    "project_id": "etransit-21d51",
+    "storage_bucket": "etransit-21d51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810819483326:android:e0ec2098de4ecb2546d0ef",
+        "android_client_info": {
+          "package_name": "com.example.buskothay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810819483326-3drospn6jt0ir8no6bg51ocqdqu6iiog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgMw20YG5lRgjNeeGtwa9MQbjPNpylsyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "810819483326-3drospn6jt0ir8no6bg51ocqdqu6iiog.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

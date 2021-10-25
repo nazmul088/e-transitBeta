@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Study/L-4-T-1/Bus Kothay 2/app/src/main/res/layout/activity_trip_history.xml" value="0.1778115501519757" />
+        <entry key="..\:/Study/L-4-T-1/Bus Kothay 2/app/src/main/res/layout/start.xml" value="0.36666666666666664" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/drawable/background.xml" value="0.24177631578947367" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/drawable/button_back_2.xml" value="0.24177631578947367" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/drawable/clr_diff.xml" value="0.3141025641025641" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/drawable/custom_button.xml" value="0.13980263157894737" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/drawable/custom_button_1.xml" value="0.3141025641025641" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/drawable/custom_button_2.xml" value="0.3141025641025641" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/drawable/custom_button_3.xml" value="0.3141025641025641" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/drawable/spinner.xml" value="0.18162393162393162" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_add_bus.xml" value="0.22" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_add_more_route.xml" value="0.30085470085470084" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_add_route_owner.xml" value="0.1683760683760684" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_bus_route_map.xml" value="0.12398648648648648" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_details_tourism_place.xml" value="0.12398648648648648" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_driver_map_updated.xml" value="0.1331081081081081" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_live_bus_location.xml" value="0.1331081081081081" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_set_fare.xml" value="0.23783783783783785" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_show_detail_info_authority_in_view_bus.xml" value="0.1331081081081081" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_show_license.xml" value="0.23783783783783785" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_show_nearby_bus_distance_and_time.xml" value="0.1331081081081081" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_tourism.xml" value="0.2287162162162162" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_track_bus.xml" value="0.23157894736842105" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/activity_view_bus.xml" value="0.1331081081081081" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/check_request_list.xml" value="0.30085470085470084" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/check_route_stoppage_xml.xml" value="0.23783783783783785" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/dialog_searchable_spinner.xml" value="0.30085470085470084" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/log_in.xml" value="0.22" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/pending_request_owner_xml.xml" value="0.1331081081081081" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/ppp.xml" value="0.23157894736842105" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/req_list_file.xml" value="0.1683760683760684" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/show_detail_bus_info.xml" value="0.1331081081081081" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/show_detail_bus_updated.xml" value="0.2" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/show_detail_to_owner_xml.xml" value="0.23783783783783785" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/sign_up.xml" value="0.23157894736842105" />
+        <entry key="..\:/Study/L-4-T-1/e-Transit/Code/app/src/main/res/layout/start.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

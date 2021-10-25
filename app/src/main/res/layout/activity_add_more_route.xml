@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".OwnerSide.AddMoreRoute">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/clr_diff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:title="Extend Route"
+        app:titleTextColor="@color/black"
+        />
+
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="match_parent"
+        android:layout_height="259dp"
+        android:layout_alignBottom="@id/toolbar"
+        android:layout_marginBottom="-304dp" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/toolbar"
+        android:layout_marginBottom="-42dp"
+        android:layout_marginLeft="10dp"
+        android:text="Already Selected Stoppage"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/listView2"
+        android:layout_marginBottom="-31dp"
+        android:layout_marginLeft="10dp"
+        android:text="Select More Stoppage"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listVIew3"
+        android:layout_width="match_parent"
+        android:layout_height="294dp"
+        android:layout_alignBottom="@id/textView56"
+        android:layout_marginBottom="-301dp" />
+
+    <Button
+        android:id="@+id/button26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/listVIew3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-58dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/custom_button_1"
+        android:text="Confirm This Route" />
+</RelativeLayout>
