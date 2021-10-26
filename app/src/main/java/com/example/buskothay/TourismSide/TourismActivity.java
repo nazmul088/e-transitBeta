@@ -6,6 +6,7 @@ package com.example.buskothay.TourismSide;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.Gravity;
@@ -138,7 +139,7 @@ public class TourismActivity extends AppCompatActivity {
                 else if(adapterView.getItemAtPosition(i).toString().equalsIgnoreCase("Cox's bazar"))
                 {
                     //Coxs selected
-                    System.out.println("IN COXS BAZAR");
+
                     showCoxsBazarImage();
                 }
             }
@@ -157,32 +158,41 @@ public class TourismActivity extends AppCompatActivity {
 
         //Set one image
         ImageView imageView = new ImageView(getApplicationContext());
-        imageView.setImageResource(R.drawable.coxs_1);
+        imageView.setImageResource(R.drawable.radiant_fish_world);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
-                intent.putExtra("place","coxs1");
+                intent.putExtra("place","Radiant Fish World");
                 startActivity(intent);
             }
         });
-        imageView.setLayoutParams(new LinearLayout.LayoutParams(Toolbar.LayoutParams.MATCH_PARENT, Toolbar.LayoutParams.WRAP_CONTENT));
+        imageView.setPadding(30,0,30,0);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(1070, 500));
         linearLayout.addView(imageView);
 
         TextView textView = new TextView(getApplicationContext());
-        textView.setText("Coxs Bazar 1");
+        textView.setText("Radiant Fish World");
+        textView.setTextColor(Color.BLACK);
+        textView.setPadding(0,0,0,40);
+        textView.setTypeface(null, Typeface.BOLD);
+
         textView.setGravity(Gravity.CENTER);
         linearLayout.addView(textView);
 
         //Set another image
 
         imageView = new ImageView(getApplicationContext());
-        imageView.setImageResource(R.drawable.coxs_2);
+        imageView.setImageResource(R.drawable.kolatoli);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setPadding(30,0,30,0);
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(800, 500));
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
-                intent.putExtra("place","coxs2");
+                intent.putExtra("place","Kolatoli");
                 startActivity(intent);
             }
         });
@@ -190,30 +200,158 @@ public class TourismActivity extends AppCompatActivity {
         linearLayout.addView(imageView);
 
         textView = new TextView(getApplicationContext());
-        textView.setText("Coxs Bazar 2");
+        textView.setText("Kolatoli");
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setTextColor(Color.BLACK);
+        textView.setPadding(0,0,0,40);
         textView.setGravity(Gravity.CENTER);
         linearLayout.addView(textView);
 
         //Set another image
 
         imageView = new ImageView(getApplicationContext());
-        imageView.setImageResource(R.drawable.coxs_3);
+        imageView.setImageResource(R.drawable.himchori_hill);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setPadding(30,0,0,0);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
-                intent.putExtra("place","coxs3");
+                intent.putExtra("place","Himchori Hill");
                 startActivity(intent);
             }
         });
-        imageView.setLayoutParams(new LinearLayout.LayoutParams(Toolbar.LayoutParams.MATCH_PARENT, Toolbar.LayoutParams.WRAP_CONTENT));
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(1050, 500));
         linearLayout.addView(imageView);
 
         textView = new TextView(getApplicationContext());
-        textView.setText("Coxs Bazar 3");
+        textView.setText("Himchori Hill");
+        textView.setTypeface(null, Typeface.BOLD);
         textView.setGravity(Gravity.CENTER);
+        textView.setPadding(0,0,0,40);
         linearLayout.addView(textView);
 
+
+        //Set another image
+
+        imageView = new ImageView(getApplicationContext());
+        imageView.setImageResource(R.drawable.funfeast_parasailing);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setPadding(90,0,0,0);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
+                intent.putExtra("place","Funfeast Parasailing");
+                startActivity(intent);
+            }
+        });
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(1050, 500));
+        linearLayout.addView(imageView);
+
+        textView = new TextView(getApplicationContext());
+        textView.setText("Funfeast Parasailing");
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setGravity(Gravity.CENTER);
+        textView.setPadding(0,0,0,40);
+        textView.setTextColor(Color.BLACK);
+        linearLayout.addView(textView);
+
+
+        imageView = new ImageView(getApplicationContext());
+        imageView.setImageResource(R.drawable.bangladesh_oceanographic_research);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setPadding(30,0,0,0);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
+                intent.putExtra("place","Bangladesh Oceanographic Research Institute");
+                startActivity(intent);
+            }
+        });
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(1050, 500));
+        linearLayout.addView(imageView);
+
+        textView = new TextView(getApplicationContext());
+        textView.setText("Bangladesh Oceanographic Research Institute");
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setGravity(Gravity.CENTER);
+        textView.setPadding(0,0,0,40);
+        textView.setTextColor(Color.BLACK);
+        linearLayout.addView(textView);
+
+
+        imageView = new ImageView(getApplicationContext());
+        imageView.setImageResource(R.drawable.coxs_kayaking);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setPadding(30,0,0,0);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
+                intent.putExtra("place","Coxs Kaykracking");
+                startActivity(intent);
+            }
+        });
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(1050, 500));
+        linearLayout.addView(imageView);
+
+        textView = new TextView(getApplicationContext());
+        textView.setText("Coxs Kaykracking");
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setGravity(Gravity.CENTER);
+        textView.setPadding(0,0,0,40);
+        textView.setTextColor(Color.BLACK);
+        linearLayout.addView(textView);
+
+
+        imageView = new ImageView(getApplicationContext());
+        imageView.setImageResource(R.drawable.inani_beach);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setPadding(30,0,0,0);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
+                intent.putExtra("place","Inani Beach");
+                startActivity(intent);
+            }
+        });
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(1050, 500));
+        linearLayout.addView(imageView);
+
+        textView = new TextView(getApplicationContext());
+        textView.setText("Inani Beach");
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setGravity(Gravity.CENTER);
+        textView.setPadding(0,0,0,40);
+        textView.setTextColor(Color.BLACK);
+        linearLayout.addView(textView);
+
+
+        imageView = new ImageView(getApplicationContext());
+        imageView.setImageResource(R.drawable.teknaf_sea_beach);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setPadding(30,0,0,0);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
+                intent.putExtra("place","Teknaf Sea Beach");
+                startActivity(intent);
+            }
+        });
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(1050, 500));
+        linearLayout.addView(imageView);
+
+        textView = new TextView(getApplicationContext());
+        textView.setText("Teknaf Sea Beach");
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setGravity(Gravity.CENTER);
+        textView.setPadding(0,0,0,40);
+        textView.setTextColor(Color.BLACK);
+        linearLayout.addView(textView);
 
 
 

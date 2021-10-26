@@ -12,7 +12,10 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -23,6 +26,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.buskothay.Bus;
@@ -31,6 +35,7 @@ import com.example.buskothay.DriverSide.DriverTrip;
 import com.example.buskothay.LocationDetails;
 import com.example.buskothay.Passenger.DistanceTimeJsonParser;
 import com.example.buskothay.Passenger.LiveBusLocation;
+import com.example.buskothay.Passenger.showNearbyBusDistanceAndTime;
 import com.example.buskothay.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -122,7 +127,7 @@ public class BusRouteMapActivity extends FragmentActivity {
                         public void onMapReady(GoogleMap googleMap) {
                             mMap = googleMap;
                             mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                            mMap.setTrafficEnabled(true);
+                            mMap.setTrafficEnabled(false);
                             mMap.getUiSettings().setMyLocationButtonEnabled(true);
                             LatLng latLng = new LatLng(location.getLatitude(),
                                     location.getLongitude());
@@ -159,12 +164,23 @@ public class BusRouteMapActivity extends FragmentActivity {
                                         CameraUpdate location = CameraUpdateFactory.newLatLngZoom(
                                                 coordinate, 10);
                                         mMap.animateCamera(location);
+                                        //add route between these location
+
+                                        for(int i=0;i<touristRoutes.size()-1;i++)
+                                        {
+                                            LatLng source = new LatLng(Double.parseDouble(touristRoutes.get(i).latitude),Double.parseDouble(touristRoutes.get(i).longitude));
+                                            LatLng destination = new LatLng(Double.parseDouble(touristRoutes.get(i+1).latitude),
+                                                    Double.parseDouble(touristRoutes.get(i+1).longitude));
+                                            String url = getRequestedUrl(source,destination);
+                                            new DownloadTask().execute(url);
+                                        }
+
 
                                         LatLng source = new LatLng(Double.parseDouble(touristRoutes.get(0).latitude),Double.parseDouble(touristRoutes.get(0).longitude));
                                         LatLng destination = new LatLng(Double.parseDouble(touristRoutes.get(touristRoutes.size()-1).latitude),
                                                 Double.parseDouble(touristRoutes.get(touristRoutes.size()-1).longitude));
                                         String url = getRequestedUrl(source,destination);
-                                        new DownloadTask1().execute(url);
+                                        new DownloadTask().execute(url);
 
                                     }
                                 }
@@ -223,6 +239,7 @@ public class BusRouteMapActivity extends FragmentActivity {
         return url;
     }
 
+    //For Measuring Distance and Time
     @SuppressLint("LongLogTag")
     private String downloadUrl(String strUrl) throws IOException {
         String data = "";
@@ -264,8 +281,7 @@ public class BusRouteMapActivity extends FragmentActivity {
 
 
 
-
-    private class DownloadTask1 extends AsyncTask<String, Void, String> {
+    private class DownloadTask extends AsyncTask<String, Void, String> {
 
 
 
@@ -291,15 +307,15 @@ public class BusRouteMapActivity extends FragmentActivity {
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
 
-            BusRouteMapActivity.ParserTask1 parserTask1 = new BusRouteMapActivity.ParserTask1();
+            BusRouteMapActivity.ParserTask parserTask = new BusRouteMapActivity.ParserTask();
 
             // Invokes the thread for parsing the JSON data
-            parserTask1.execute(result);
+            parserTask.execute(result);
         }
     }
 
     /** A class to parse the Google Places in JSON format */
-    private class ParserTask1 extends AsyncTask<String, Integer, List<List<HashMap<String,String>>> >{
+    private class ParserTask extends AsyncTask<String, Integer, List<List<HashMap<String,String>>> >{
 
         // Parsing the data in non-ui thread
 
@@ -330,10 +346,9 @@ public class BusRouteMapActivity extends FragmentActivity {
             PolylineOptions polylineOptions = null;
             MarkerOptions markerOptions = new MarkerOptions();
 
-            Polyline polyline=null;
-
             String distance = "";
             String duration = "";
+            Polyline polyline = null;
 
 
 
@@ -375,7 +390,6 @@ public class BusRouteMapActivity extends FragmentActivity {
                 polylineOptions.width(4);
                 polylineOptions.color(Color.BLUE);
             }
-
             //  System.out.println("Distance"+distance +"duration"+ duration);
 
             if (polylineOptions != null) {
@@ -398,6 +412,7 @@ public class BusRouteMapActivity extends FragmentActivity {
 
 
     }
+
 
 
 }
