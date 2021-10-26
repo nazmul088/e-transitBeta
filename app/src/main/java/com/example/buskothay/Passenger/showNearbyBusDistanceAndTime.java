@@ -413,6 +413,7 @@ public class showNearbyBusDistanceAndTime extends AppCompatActivity implements S
                                                                             LocationDetails locationDetails1 = dataSnapshot1.getValue(LocationDetails.class);
                                                                             String disUrl = getDirectionsUrl(new LatLng(Double.parseDouble(locationDetails.getLatitude()),Double.parseDouble(locationDetails.getLongitude())),
                                                                                     new LatLng(Double.parseDouble(locationDetails1.getLatitude()),Double.parseDouble(locationDetails1.getLongitude())));
+                                                                            System.out.println(disUrl);
                                                                             new DownloadTask("testBus","testBus","testBus","testBus","testBus","testBus").execute(disUrl);
                                                                         }
                                                                     }
@@ -1118,8 +1119,6 @@ public class showNearbyBusDistanceAndTime extends AppCompatActivity implements S
 
 
         }
-
-
 
 
         return totalFare;

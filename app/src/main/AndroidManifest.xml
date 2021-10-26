@@ -25,9 +25,9 @@
         <activity
             android:name=".TourismSide.DetailsTourismPlaceActivity"
             android:exported="false" />
-        <!--<activity
+        <activity
             android:name=".TourismSide.TourismActivity"
-            android:exported="false" />-->
+            android:exported="false" />
         <activity
             android:name=".AuthoritySide.ShowDetailInfoAuthorityInViewBus"
             android:exported="false" />
@@ -65,7 +65,7 @@
         <activity android:name=".OwnerSide.AddBusActivity" />
         <activity android:name=".OwnerSide.Pending_Request_Owner" />
         <activity android:name=".OwnerSide.Show_Detail_to_Owner" />
-        <activity android:name=".LoginActivity" />
+      <!--  <activity android:name=".LoginActivity" />-->
         <activity android:name=".AuthoritySide.Activity_Request_Bus" />
         <activity android:name=".AuthoritySide.Check_Route_Stoppage" />
         <activity android:name=".AuthoritySide.Show_Detail_Info_Authority" />
@@ -79,7 +79,7 @@
         <activity android:name=".Passenger.showNearbyBusDistanceAndTime" />
         <activity android:name=".Passenger.LiveBusLocation" />
         <activity android:name=".Passenger.ScannerView" />
-        <activity android:name=".TourismSide.TourismActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
