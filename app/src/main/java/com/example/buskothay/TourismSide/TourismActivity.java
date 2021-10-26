@@ -135,11 +135,13 @@ public class TourismActivity extends AppCompatActivity {
                     //Sylhet selected
                     LinearLayout linearLayout = findViewById(R.id.linear_layout);
                     linearLayout.removeAllViews();
+                    showSylhetImage();
                 }
                 else if(adapterView.getItemAtPosition(i).toString().equalsIgnoreCase("Cox's bazar"))
                 {
                     //Coxs selected
-
+                    LinearLayout linearLayout = findViewById(R.id.linear_layout);
+                    linearLayout.removeAllViews();
                     showCoxsBazarImage();
                 }
             }
@@ -151,6 +153,85 @@ public class TourismActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void showSylhetImage() {
+        LinearLayout linearLayout = findViewById(R.id.linear_layout);
+
+
+
+        ImageView imageView = new ImageView(getApplicationContext());
+        imageView.setImageResource(R.drawable.sadapathor);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setPadding(30,0,0,0);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
+                intent.putExtra("place","Sada Pathor");
+                startActivity(intent);
+            }
+        });
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(1050, 500));
+        linearLayout.addView(imageView);
+
+        TextView textView = new TextView(getApplicationContext());
+        textView.setText("sada Pathor");
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setGravity(Gravity.CENTER);
+        textView.setPadding(0,0,0,40);
+        textView.setTextColor(Color.BLACK);
+        linearLayout.addView(textView);
+
+
+
+        imageView = new ImageView(getApplicationContext());
+        imageView.setImageResource(R.drawable.ratargul);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setPadding(30,0,0,0);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
+                intent.putExtra("place","Ratargul");
+                startActivity(intent);
+            }
+        });
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(1050, 500));
+        linearLayout.addView(imageView);
+
+        textView = new TextView(getApplicationContext());
+        textView.setText("Ratargul");
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setGravity(Gravity.CENTER);
+        textView.setPadding(0,0,0,40);
+        textView.setTextColor(Color.BLACK);
+        linearLayout.addView(textView);
+
+
+
+        imageView = new ImageView(getApplicationContext());
+        imageView.setImageResource(R.drawable.bishankandi);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setPadding(30,0,0,0);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
+                intent.putExtra("place","Bishanakandi");
+                startActivity(intent);
+            }
+        });
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(1050, 500));
+        linearLayout.addView(imageView);
+
+        textView = new TextView(getApplicationContext());
+        textView.setText("Bishanakandi");
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setGravity(Gravity.CENTER);
+        textView.setPadding(0,0,0,40);
+        textView.setTextColor(Color.BLACK);
+        linearLayout.addView(textView);
     }
 
     private void showCoxsBazarImage() {
