@@ -37,7 +37,7 @@
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintStart_toStartOf="parent"
         map:layout_constraintTop_toBottomOf="@id/toolbar"
-        map:layout_constraintVertical_bias="0.331" />
+        />
 
 
     <Button

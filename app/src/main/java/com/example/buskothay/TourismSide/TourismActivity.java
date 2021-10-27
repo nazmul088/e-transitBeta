@@ -323,7 +323,7 @@ public class TourismActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
-                intent.putExtra("place","Funfeast Parasailing");
+                intent.putExtra("place","FunFest Parasailing & Beach");
                 startActivity(intent);
             }
         });
@@ -371,7 +371,7 @@ public class TourismActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),DetailsTourismPlaceActivity.class);
-                intent.putExtra("place","Coxs Kaykracking");
+                intent.putExtra("place","Cox Kayaking");
                 startActivity(intent);
             }
         });
@@ -379,7 +379,7 @@ public class TourismActivity extends AppCompatActivity {
         linearLayout.addView(imageView);
 
         textView = new TextView(getApplicationContext());
-        textView.setText("Coxs Kaykracking");
+        textView.setText("Coxs Kayaking");
         textView.setTypeface(null, Typeface.BOLD);
         textView.setGravity(Gravity.CENTER);
         textView.setPadding(0,0,0,40);

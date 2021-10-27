@@ -20,6 +20,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -86,11 +87,10 @@ public class DetailsTourismPlaceActivity extends FragmentActivity {
         });
 
 
-        button = (Button) findViewById(R.id.button2);
+        button = (Button) findViewById(R.id.button2); // Book A Seat
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
             }
         });
 
@@ -137,9 +137,9 @@ public class DetailsTourismPlaceActivity extends FragmentActivity {
                             mMap.getUiSettings().setMyLocationButtonEnabled(true);
                             LatLng latLng = new LatLng(location.getLatitude(),
                                     location.getLongitude());
-                            System.out.println("Location: " + latLng.latitude + "\t" + latLng.longitude);
+                           // System.out.println("Location: " + latLng.latitude + "\t" + latLng.longitude);
                             mMap.setMyLocationEnabled(true);
-                            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
+                            //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
 
                             databaseReference = FirebaseDatabase.getInstance().getReference("TouristStoppage");
                             Query query = databaseReference.orderByChild("placeName").equalTo(getIntent().getStringExtra("place"));
@@ -150,7 +150,11 @@ public class DetailsTourismPlaceActivity extends FragmentActivity {
                                     {
                                         for(DataSnapshot dataSnapshot:snapshot.getChildren())
                                         {
-
+                                            TouristRoute touristRoute = dataSnapshot.getValue(TouristRoute.class);
+                                            LatLng latLng1 = new LatLng(Double.parseDouble(touristRoute.latitude),
+                                                    Double.parseDouble(touristRoute.longitude));
+                                            mMap.addMarker(new MarkerOptions().position(latLng1).title(touristRoute.placeName).icon(BitmapFromVector(getApplicationContext(), R.drawable.ic_baseline_place_24)));
+                                            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng1,12));
                                         }
                                     }
                                 }
@@ -180,9 +184,9 @@ public class DetailsTourismPlaceActivity extends FragmentActivity {
         // drawable which we have added.
         Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
 
+
         // below line is use to add bitmap in our canvas.
         Canvas canvas = new Canvas(bitmap);
-
         // below line is use to draw our
         // vector drawable in canvas.
         vectorDrawable.draw(canvas);

@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".TourismSide.SeatBookingActivity"
+            android:exported="false" />
+        <activity
             android:name=".TourismSide.BusRouteMapActivity"
             android:exported="false" />
         <activity
@@ -64,8 +67,7 @@
         <activity android:name=".DriverSide.DriverWindow" />
         <activity android:name=".OwnerSide.AddBusActivity" />
         <activity android:name=".OwnerSide.Pending_Request_Owner" />
-        <activity android:name=".OwnerSide.Show_Detail_to_Owner" />
-      <!--  <activity android:name=".LoginActivity" />-->
+        <activity android:name=".OwnerSide.Show_Detail_to_Owner" /> <!-- <activity android:name=".LoginActivity" /> -->
         <activity android:name=".AuthoritySide.Activity_Request_Bus" />
         <activity android:name=".AuthoritySide.Check_Route_Stoppage" />
         <activity android:name=".AuthoritySide.Show_Detail_Info_Authority" />
