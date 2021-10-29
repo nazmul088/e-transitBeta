@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bus Kothay</string>
+    <string name="app_name">E-Transit</string>
     <string name="title_activity_track_my_location">Map</string>
     <string name="update">Update</string>
     <string name="latitude">Latitude</string>

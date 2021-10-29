@@ -67,7 +67,8 @@
         <activity android:name=".DriverSide.DriverWindow" />
         <activity android:name=".OwnerSide.AddBusActivity" />
         <activity android:name=".OwnerSide.Pending_Request_Owner" />
-        <activity android:name=".OwnerSide.Show_Detail_to_Owner" /> <!-- <activity android:name=".LoginActivity" /> -->
+        <activity android:name=".OwnerSide.Show_Detail_to_Owner" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".AuthoritySide.Activity_Request_Bus" />
         <activity android:name=".AuthoritySide.Check_Route_Stoppage" />
         <activity android:name=".AuthoritySide.Show_Detail_Info_Authority" />
@@ -81,7 +82,7 @@
         <activity android:name=".Passenger.showNearbyBusDistanceAndTime" />
         <activity android:name=".Passenger.LiveBusLocation" />
         <activity android:name=".Passenger.ScannerView" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".start_window">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
